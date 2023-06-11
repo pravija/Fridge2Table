@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %} 
+{% block title %}Ingredients Page{% endblock %}
+{% block content %}
+<h1>Ingredients</h1>
+  <ul>
+    {% for ingredient in ingredients %}
+      {% if forloop.counter > list_index %}
+        <li>{{ ingredient.name }}</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+
+{% endblock %}

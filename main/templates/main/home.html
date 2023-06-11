@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %} 
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<h1>Fridge 2 Table</h1>
+<!-- <p>TODO: recommender.</p> -->
+<form method="post">
+    {% csrf_token %}
+    <label for="ingredients">Ingredients:</label><br>
+    <textarea id="ingredients" name="ingredients" rows="5" cols="50"></textarea><br>
+    <input type="submit" value="Submit">
+</form>
+</br>
+<button class="black-white-button"><a href="{% url 'ingredients' %}">View Ingredients</a></button>
+<style>
+	.black-white-button {
+		color: #ffffff;
+		background-color: #191717;
+		border: 1px solid #000000;
+		padding: 10px 20px;
+		text-decoration: none;
+		font-size: 16px;
+	}
+</style>
+{% endblock %}
